@@ -8,6 +8,7 @@ license=(GPL)  # For some Java script; don't know about most of it though
 makedepends=(tar)
 _file="$pkgname-$pkgver.tar.gz"
 source=("http://git-core.googlecode.com/files/$_file")
+noextract=("$_file")
 md5sums=(11fdeb260d8160396ecdcb18daada00f)
 sha256sums=(bcb11eda56ac74687cc6852f6ee104ab5dcf13039546616c608783cebc7f4a40)
 
