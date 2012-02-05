@@ -7,6 +7,7 @@ arch=(any)
 url="https://github.com/Bibzball/Git-Mediawiki/wiki"
 license=(GPL2)
 depends=(perl-mediawiki-api perl-datetime-format-iso8601)
+optdepends=("perl-crypt-ssleay: HTTPS wikis")
 makedepends=(git)
 source=("https://git-core.googlecode.com/files/$_rls.tar.gz")
 sha1sums=(ed51ef5ef250daaa6e98515cf2641820cd268d4c)
