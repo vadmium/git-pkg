@@ -1,6 +1,5 @@
 pkgname=git-mediawiki
-pkgver=1.8.0.2
-_rls="git-$pkgver"
+pkgver=1.8.1.3
 pkgrel=1
 pkgdesc="Gateway between Git and Media Wiki"
 arch=(any)
