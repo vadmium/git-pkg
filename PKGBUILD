@@ -7,7 +7,7 @@ arch=(any)
 url="https://github.com/moy/Git-Mediawiki/wiki"
 license=(GPL2)
 depends=(perl-mediawiki-api perl-datetime-format-iso8601 git)
-optdepends=("perl-crypt-ssleay: HTTPS wikis")
+optdepends=("perl-lwp-protocol-https: HTTPS wikis")
 makedepends=(git)
 
 package() {
