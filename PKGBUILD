@@ -1,5 +1,5 @@
 pkgname=git-mediawiki
-pkgver=1.8.1.3
+pkgver=1.8.3.4
 pkgrel=1
 pkgdesc="Gateway between Git and Media Wiki"
 arch=(any)
@@ -8,6 +8,8 @@ license=(GPL2)
 depends=(perl-mediawiki-api perl-datetime-format-iso8601 git)
 optdepends=("perl-lwp-protocol-https: HTTPS wikis")
 makedepends=(git)
+source=("http://git-core.googlecode.com/files/git-$pkgver.tar.gz"
+)
 
 package() {
     local DIR="$pkgdir$(git --exec-path)"
@@ -19,3 +21,6 @@ package() {
     # Linking is easier to maintain
     ln -s /usr/share/git/mw-to-git/git-remote-mediawiki "$DIR"
 }
+
+md5sums=('80eec3201a5d012913d287b85adaee8e'
+)
