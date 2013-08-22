@@ -12,14 +12,11 @@ source=("http://git-core.googlecode.com/files/git-$pkgver.tar.gz"
 )
 
 package() {
-    local DIR="$pkgdir$(git --exec-path)"
-    install -d "$DIR"
+    local DIR="$(git --exec-path)"
+    install -d "$pkgdir$DIR"
     
-    # Not using the Make file provided because it copies the file
-    # make -C /usr/share/git/mw-to-git install
-    
-    # Linking is easier to maintain
-    ln -s /usr/share/git/mw-to-git/git-remote-mediawiki "$DIR"
+    cd "$srcdir/git-$pkgver/contrib/mw-to-git"
+    make install DESTDIR="$pkgdir" gitexecdir="$DIR"
 }
 
 md5sums=('80eec3201a5d012913d287b85adaee8e'
