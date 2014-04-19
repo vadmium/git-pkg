@@ -9,10 +9,10 @@ makedepends=(tar)
 _file="$pkgname-$pkgver.tar.xz"
 source=("https://www.kernel.org/pub/software/scm/git/$_file")
 noextract=("$_file")
-md5sums=(be01cc4be1b946b053b69d12b422854a)
+md5sums=(16d81fe0f7148218331ceadd0b0b18b2)
 
 package() {
     local DIR="$pkgdir/usr/share/doc/git-doc"
     install -d "$DIR"
-    tar xzf "$srcdir/$_file" -C "$DIR" --no-same-owner
+    tar xf "$srcdir/$_file" -C "$DIR" --no-same-owner
 }
