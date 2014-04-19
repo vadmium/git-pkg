@@ -16,7 +16,7 @@ package() {
     install -d "$pkgdir$DIR"
     
     cd "$srcdir/git-$pkgver/contrib/mw-to-git"
-    make install DESTDIR="$pkgdir" gitexecdir="$DIR"
+    make install DESTDIR="$pkgdir" gitexecdir="$DIR" prefix=/usr
 }
 
 md5sums=('437c32078b5b5b229f1c10f6474eae78'
