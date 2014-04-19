@@ -15,4 +15,5 @@ package() {
     local DIR="$pkgdir/usr/share/doc/git-doc"
     install -d "$DIR"
     tar xf "$srcdir/$_file" -C "$DIR" --no-same-owner
+    chmod -R +u "$DIR"
 }
