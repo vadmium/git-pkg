@@ -1,5 +1,5 @@
 pkgname=git-htmldocs
-pkgver=1.9.2
+pkgver=1.9.3
 pkgrel=1
 pkgdesc="Git HTML and plain text documentation pages"
 arch=(any)
