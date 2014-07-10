@@ -6,7 +6,10 @@ arch=(any)
 url="https://github.com/moy/Git-Mediawiki/wiki"
 license=(GPL2)
 depends=(perl-mediawiki-api perl-datetime-format-iso8601 git perl-libwww)
-optdepends=("perl-lwp-protocol-https: HTTPS wikis")
+optdepends=(
+    "perl-lwp-protocol-https: HTTPS wikis"
+    "perl-html-tree: git mw preview"
+)
 makedepends=(git)
 source=("https://www.kernel.org/pub/software/scm/git/git-$pkgver.tar.xz"
 )
